@@ -1,0 +1,148 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #fcf9e4;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+	line-height: 1.6;
+}
+
+
+header{
+	background-image: linear-gradient(to right, #043635, #227774);
+	color: #d8fdf9;
+	padding: 20px;
+	text-align: center;
+}
+
+
+nav ul{
+	list-style-type: none;
+	text-align: center;
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+
+nav ul li{
+	display: inline;
+	margin-right: 30px;
+}
+
+nav ul li a{
+	color: #418b88;
+	text-decoration: none;
+	font-weight: bold;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 1.2em;
+}
+
+nav ul li a:hover{
+	color: #89d3d0;
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+section{
+	margin: 40px;
+	padding: 20px;
+	background-color: #ccfff7;
+	border-radius: 20px;
+	box-shadow: 0px 0px 20px rgba(0, 63, 58, 0.1);
+	font-size: 1.2em;
+
+	display: grid;
+	grid-template-columns: repeat(3, minmax(300px, 1fr));
+	gap: 20px;
+}
+
+@media (max-width: 600px) {
+	section{
+		grid-template-columns: 1fr;
+		margin: 10px;
+	}
+	.audio-item,.video-item{
+		grid-column: 1 / -1;
+		margin: auto;
+		max-width: 85%;
+	}
+}
+
+@media (max-width: 945px) and (min-width: 601px) {
+  section {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  }
+}
+
+
+section h2{
+	color: #084e4c;
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 2em;
+
+	grid-column: 1 / -1;
+	grid-row: 1;
+}
+
+section h3{
+	color: #084e4c;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+section p{
+	text-align: justify;
+	margin-bottom: 20px;
+	color: #084e4c;
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+.audio-item,.video-item{
+	padding: 20px;
+	border: 2px solid #084e4c;
+	border-radius: 10px;
+}
+
+.audio-item:hover,.video-item:hover{
+	transform: scale(1.05);
+	transition: transform 0.3s ease;
+	background-color: #dabdff;
+}
+
+.audio-item audio{
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	border: 2px solid #0f7777;
+	border-radius: 40px;
+}
+.video-item video{
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	border: 2px solid #0f7777;
+	border-radius: 20px;
+}
+footer{
+	background-color: #084e4c;
+	color: #d8fdf9;
+	padding: 10px;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 0.9em;
+	a{
+		color: #a5fff6;
+		text-decoration: none;
+		font-weight: bold;
+	}
+	a:hover{
+		color: #89d3d0;
+		text-decoration: underline;
+	}
+	address{
+		font-style: normal;
+	}
+}	
+
